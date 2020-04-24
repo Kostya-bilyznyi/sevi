@@ -1,0 +1,479 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&family=Playfair+Display:wght@700&display=swap');
+@import "normalize.scss";
+@import "layout.scss";
+
+body{
+
+	font: 400 20px/1.9 'Nunito Sans', sans-serif;
+	color: #44224B;
+	background: url(../img/bgright.png) no-repeat right top;
+	background-size: 47vw;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	line-height: 1.3;
+	margin: 0 0 50px;
+	font: 700 32px/1.56 'Nunito Sans', sans-serif;
+}
+
+h1 {
+	font: 700 76px/1.31 'Playfair Display', sans-serif;
+	letter-spacing: 0.02em;
+}
+
+h2 {
+	font: 700 52px/1.19 'Playfair Display', sans-serif;
+}
+
+h3 {
+	font: 700 52px/1.3 'Playfair Display', sans-serif;
+}
+
+h4{
+	color: #091E40;
+}
+
+a {
+color: #44224B;
+text-decoration: none;
+	&:hover {
+		text-decoration: underline;
+		}
+}
+
+p {
+	margin-top: 0;
+}
+/* Layout */
+.ba-container{
+	padding-left: 20px;
+	padding-right: 20px;
+	max-width: 1605px;
+}
+
+/* Typography */
+a,
+input[type="submit"],
+input[type="button"],
+button{
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+input[type="submit"],
+input[type="button"],
+button,
+.ba-button{
+	display: inline-block;
+}
+input[type="submit"]:hover,
+input[type="button"]:hover,
+button:hover,
+.ba-button:hover{
+
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+textarea,
+select {
+	transition: color 0.3s ease-in, 
+	border-color 0.3s ease-in,
+	background-color 0.3s ease-in, 
+	opacity 0.3s ease-in;
+	border: 2px solid #f4eef5;
+	border-radius: 42px;
+	color: #f4eef5;
+	background-color: #f4eef5;
+	padding: 22px 50px;
+	height: 83px;
+	width: 680px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+textarea:focus,
+select:focus {
+
+	border: 2px solid transparent;
+	background-color: #fff;
+	border-radius: 42px;
+	caret-color: #44224b;
+  	color: #44224b;
+  	font-weight: 800;
+  	border-color: #723182;
+  	outline: none;
+}
+textarea {
+
+}
+
+.ba-section-intro{
+background: url(../img/bg1.png) no-repeat left bottom 50px;
+}
+
+.ba-section-intro_inner{
+	width: 60%;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 330px 0;
+	box-sizing: border-box;
+	& p{
+		font: 400 28px/1.43 'Nunito Sans', sans-serif;
+		color: #968FAB;
+		padding-bottom: 55px;
+	}
+}
+	
+@media screen and (max-width:640px){
+	.ba-section-intro_inner h1{
+		font-size: 30px;
+		padding-right: 40%;
+	}
+	.ba-section-intro_inner{
+		width: 100%;
+		padding: 60px 0;
+		& p{
+			font-size: 24px;
+		}
+	}
+}
+
+.ba-logo__img {
+	display: block;
+}
+
+.ba-search-form{
+	display: flex;
+	position: relative;
+}
+
+.ba-search-form [type="search"]{
+	background: #F4EEF5;
+	height: 78px;
+	border-radius: 39px;
+	border: none;
+	padding: 20px 80px 20px 65px;
+	box-sizing: border-box;
+	color: #AE9CB1;
+	font: 600 24px/1 "Nunito Sans", sans-serif;
+	outline: none;
+	transition: box-shadow 0.3s;
+	width: 100%;
+	font: 400 20px/1.9 'Nunito Sans', sans-serif;
+	position: relative;
+	margin-right: 200px;
+}
+
+.ba-search-form [type="search"]:focus::placeholder{
+	color: transparent;
+}
+.ba-search-form [type="search"]::placeholder{
+	color: #a9a4ba;
+	transition: color 0.3s;
+}
+
+.ba-button-rounded{
+	width: 60px;
+	height: 60px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	background: transparent;
+	border-radius: 50%;
+	color: #8A748F;
+	position: absolute;
+	outline: none;
+	padding: 0;
+	right: 224px;
+	top: 10px;
+	border-width: 0;
+	&:hover{
+		color:#723182;
+	}
+}
+
+@media screen and (max-width:1024px){
+	.ba-search-form [type="search"]{
+		margin-right: 10px;
+	}
+	
+	.ba-button-rounded{
+		right: 30px;
+		top: 10px;
+	}
+
+	.ba-section-intro_inner p {
+		margin-bottom: 0;
+	}
+}
+
+.ba-header{
+	position: absolute;
+	padding-top: 68px;
+	left: 0;
+	top: 0;
+	width: 100%;
+	&__inner{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		}
+}
+
+.ba-nav{
+	&__list {
+		margin: 0;
+		padding: 0;
+		display: flex;
+		list-style: none;
+		align-items: center;
+	}
+	&__item{
+		padding-left: 75px;
+		line-height: 1;
+		}
+	&__link{
+		color: #44224B;
+		font: 400 22px/0.68 "Nunito Sans", sans-serif;
+		display: flex;
+		&--button{
+			background-color: #723182;
+			padding: 12px 56px;
+			border-radius: 27px;
+			color: #fff;
+			font: 700 20px "Nunito Sans", sans-serif;
+			border: 1px solid #723182;
+			&:hover{
+				background-color: transparent;
+				border: 1px solid #723182;
+				color: #723182;
+				text-decoration: none;
+			}
+		&--bold {
+			font-weight: 600;
+			}
+		}
+	}
+}
+
+.ba-menu-toggle {
+	height: 24px;
+	width: 40px;
+	border: none;
+	background: none;
+	border-radius: 0;
+	-webkit-appearance: none;
+	display: inline-flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: stretch;
+	padding: 0;
+	outline: none;
+
+	&::before,
+	&::after {
+		content: '';
+	}
+	&::before,
+	&::after,
+	& span {
+		display: block;
+		width: 100%;
+		height: 4px;
+		background: rgb(0, 0, 0);
+		transition: transform 0.3s, opacity 0.3s;
+	}	
+}
+
+@media screen and (min-width:1024px){
+	.ba-menu-toggle {
+		display: none;
+	}
+}
+
+@media (max-width: 1023px) {
+	.ba-nav{
+		font: 700 28px "Nunito Sans", sans-serif;
+		position: fixed;
+		top: 0;
+		left: 0;
+		height: 100vh;
+		background: rgba(253, 198, 0);
+		width: 65%;
+		padding: 40px 30px;
+		z-index: 10;
+		transition: transform 0.3s, opacity 0.3s;
+		transform: translateX(-102%);
+		&__link--drop:after{
+			display: none;
+		}
+	}
+	.ba-header {
+		padding-top: 20px;
+	}
+	
+	.ba-nav.open {
+		/* display: block; */
+		transform: translateX(0);
+		opacity: 1;
+
+		& ~ .ba-menu-toggle:before {
+			transform: translateY(10px) rotate(45deg);
+		}
+
+		&  ~ .ba-menu-toggle:after {
+			transform: translateY(-10px) rotate(-45deg);
+		}
+
+		&  ~ .ba-menu-toggle span {
+			opacity: 0;
+		}
+	}
+	
+	.ba-nav__list {
+		display: block;
+	}
+	.ba-nav__item{
+		padding-left: 0;
+	}
+	.ba-nav__link {
+		font-size: 24px;
+		text-transform: uppercase;
+	}
+	.ba-nav__item + .ba-nav__item {
+		margin-top: 20px;
+	}
+	.ba-nav__link--button {
+		text-align: center;
+		text-transform: none;
+		font-size: 20px;
+		display: block;
+		max-width: 200px;
+
+	}
+}
+
+.ba-nav__link--drop {
+	position: relative;
+ }
+ 
+.ba-nav__link--drop:after {
+	content: '';
+	width: 11px;
+	height: 6px;
+	background-image: url(../img/arrow-down.png);
+	position: absolute;
+	top: 49%;
+	right: -20px;
+}
+
+.ba-row__small-text{
+	font: 400 22px/1.9 'Nunito Sans', sans-serif;
+	list-style-type: none;
+	padding: 0;
+	color: #777C86;
+}
+
+.ba-cta-row__text p{
+	color: #777C86;
+	margin-bottom: 100px;
+}
+
+@media screen and (max-width:640px){
+	.ba-cta-row__text p{
+		margin-bottom: 30px;
+	}
+}
+
+.ba-col {
+	width: 25%;
+	box-sizing: border-box;
+}
+
+ @media screen and (max-width:640px){
+	.ba-row {
+		display: flex;
+		flex-direction: column;
+		align-items: stretch;
+		justify-content: center;
+	}
+	.ba-col{
+		width: 100%;
+	}
+}
+
+.ba-text-light {
+	color: #FDC800;
+}
+
+.ba-resources {
+	position: relative;
+}
+
+.ba-resources:after {
+	content: '';
+	background: url(../img/coub.png) no-repeat;
+	width: 89px;
+	height: 169px;
+	position: absolute;
+	right: 0px;
+	top: 0;
+}
+
+.ba-cta-row--button {
+	font: 700 18px/1.8 'Nunito Sans', sans-serif;
+	background-color: #723182;
+	border-radius: 32px;
+   color: #ffffff;
+   padding: 20px 65px;
+   opacity: 1;
+   border: 1px solid #723182;
+   text-decoration: none;
+}
+
+.ba-cta-row--button:hover{
+	background-color: transparent;
+	color: #723182;
+	text-decoration: none;
+}
+
+@media screen and (min-width:640px){
+	.ba-cta-row__img{
+		width: 60%;
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+	}
+}
+
+@media screen and (min-width:1024px){
+	.ba-cta-row + .ba-cta-row {
+		margin-top: 134px;
+	}
+	.ba-cta-row{
+		display: flex;
+		align-items: center
+	}
+	.ba-cta-row__img{
+		width: 30%;
+		flex-shrink: 0;
+		margin: 0;
+	}
+	.ba-cta-row:nth-child(odd) .ba-cta-row__text{
+		padding-left: 123px;
+		padding-right: 100px;
+	}
+}
+
+@media screen and (min-width:1024px){
+	.ba-cta-row__img{
+		width: 50%;
+	}
+}
