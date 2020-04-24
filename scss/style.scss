@@ -446,10 +446,9 @@ background: url(../img/bg1.png) no-repeat left bottom 50px;
 
 @media screen and (min-width:640px){
 	.ba-cta-row__img{
-		width: 60%;
-		margin-left: auto;
-		margin-right: auto;
+		width: 100%;
 		display: block;
+		margin-bottom: 50px;
 	}
 }
 
