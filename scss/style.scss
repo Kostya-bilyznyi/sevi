@@ -950,6 +950,9 @@ background: url(../img/bg1.png) no-repeat left bottom;
    		align-items: center;
 			justify-content: center;
 			margin-right: 90px;
+			@media screen and (max-width:1023px){
+				margin: 0;
+			}
 		a{
 			border-radius: 50%;
    		width: 35px;

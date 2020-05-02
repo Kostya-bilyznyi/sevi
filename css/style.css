@@ -1445,6 +1445,11 @@ select:focus {
   justify-content: center;
   margin-right: 90px;
 }
+@media screen and (max-width: 1023px) {
+  .ba-footer__bottom-links {
+    margin: 0;
+  }
+}
 .ba-footer__bottom-links a {
   border-radius: 50%;
   width: 35px;
